@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yu.hearttoheart.dao.MessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yu.hearttoheart.entity.Message">
+        <id column="id" property="id" />
+        <result column="from_id" property="fromId" />
+        <result column="target_id" property="targetId" />
+        <result column="content" property="content" />
+        <result column="content_type" property="contentType" />
+        <result column="state" property="state" />
+        <result column="sent_time" property="sentTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, from_id, target_id, content, content_type, state, sent_time
+    </sql>
+
+</mapper>

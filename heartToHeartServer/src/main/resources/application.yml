@@ -1,0 +1,37 @@
+
+spring:
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    #mysql??????????
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    password: root
+    # Type ???????????????
+    #    type: com.alibaba.druid.pool.DruidDataSource
+    # c3p0???  com.mchange.v2.c3p0.ComboPooledDataSource
+#  redis:
+#    host: localhost
+#    port: 6379
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # ??????
+    db-config:
+      # ???
+      logic-not-delete-value: 1
+      # ???
+      logic-delete-value: 0
+
+#  ????swagger?? ??????
+enable:
+  swagger: true
+
+server:
+  port: 8080
